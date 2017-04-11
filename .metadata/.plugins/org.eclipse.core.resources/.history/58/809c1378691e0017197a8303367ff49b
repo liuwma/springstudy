@@ -1,0 +1,7 @@
+package pers.lwm.springstudy3;
+
+@Configuration
+@ComponentScan("pers.lwm.springstudy3")
+public class AppConfig {
+
+}

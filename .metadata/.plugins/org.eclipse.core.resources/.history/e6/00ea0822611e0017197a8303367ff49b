@@ -1,0 +1,16 @@
+package pers.lwm.springstudy.dynamicproxy;
+
+import java.lang.reflect.Proxy;
+
+public class DynamicProxy {
+	public static void main(String[] args) {
+		
+		RealSubject real = new RealSubject();   
+	    ISubject proxySubject = (ISubject)Proxy.newProxyInstance(ISubject.class.getClassLoader(), 
+	     new Class[]{ISubject.class}, 
+	     new ProxyHandler(real));
+	         
+	    proxySubject.doSth();
+
+	}
+}

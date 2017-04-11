@@ -1,0 +1,5 @@
+package pers.lwm.springstudy3;
+
+public class AppConfig {
+
+}

@@ -1,0 +1,27 @@
+package pers.lwm.springstudy;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * Hello world!
+ *
+ */
+public class App {
+	public static void main(String[] args) {
+
+		test1();
+
+		System.out.println("Hello World!");
+	}
+
+	public static void test1() {
+
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(
+				new String[] { "applicationContext" });
+		
+		User user = (User)applicationContext.getBean("user");
+		
+		System.out.println(user.toString());
+	}
+}

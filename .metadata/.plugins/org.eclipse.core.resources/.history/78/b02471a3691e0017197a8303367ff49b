@@ -1,0 +1,15 @@
+package pers.lwm.springstudy3;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * spring java 配置 类
+ * @author Administrator
+ *
+ */
+@Configuration
+@ComponentScan("pers.lwm.springstudy3")
+public class AppConfig {
+
+}

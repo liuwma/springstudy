@@ -1,0 +1,32 @@
+package pers.lwm.springstudy.dynamicproxy;
+
+import java.lang.reflect.Proxy;
+
+public class DynamicProxy {
+	public static void main(String[] args) {
+		
+		RealSubject real = new RealSubject();   
+	    ISubject proxySubject = (ISubject)Proxy.newProxyInstance(ISubject.class.getClassLoader(), 
+	     new Class[]{ISubject.class}, 
+	     new ProxyHandler(real));
+	         
+	    proxySubject.doSth();
+
+	}
+	
+	public static void createProxyClassFile()   
+	  {   
+	    String name = "ProxySubject";   
+	    byte[] data = ProxyGenerator.generateProxyClass( name, new Class[] { Subject.class } );   
+	    try  
+	    {   
+	      FileOutputStream out = new FileOutputStream( name + ".class" );   
+	      out.write( data );   
+	      out.close();   
+	    }   
+	    catch( Exception e )   
+	    {   
+	      e.printStackTrace();   
+	    }   
+	  }   
+}

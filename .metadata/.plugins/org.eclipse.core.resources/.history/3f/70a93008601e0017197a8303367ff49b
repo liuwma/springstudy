@@ -1,0 +1,24 @@
+package pers.lwm.springstudy;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+public class DynamicProxy {
+	public static void main(String[] args) throws InstantiationException, IllegalAccessException, NoSuchMethodException,
+			SecurityException, IllegalArgumentException, InvocationTargetException {
+		try {
+
+			Class<?> c = Class.forName("pers.lwm.springstudy.User");
+			User user = (User) c.newInstance();
+
+			System.out.println(user.toString());
+
+			Method method = c.getMethod("toString", null);
+			Object result = m.invoke(user, null);
+
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+}

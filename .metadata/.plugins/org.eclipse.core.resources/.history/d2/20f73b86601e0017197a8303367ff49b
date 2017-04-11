@@ -1,0 +1,9 @@
+package pers.lwm.springstudy;
+
+import java.lang.reflect.Proxy;
+
+public class DynamicProxy {
+	public static void main(String[] args) {
+		Proxy.newProxyInstance(loader, interfaces, h)
+	}
+}

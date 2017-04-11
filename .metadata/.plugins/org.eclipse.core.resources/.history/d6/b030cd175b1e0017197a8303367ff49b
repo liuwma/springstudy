@@ -1,0 +1,28 @@
+package pers.lwm.springstudy;
+
+/**
+ * 用户类
+ * @author lwm 2017/04/11
+ *
+ */
+public class User {
+
+	private int id ;
+	private String name;
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getUser_name() {
+		return name;
+	}
+	public void setUser_name(String user_name) {
+		this.name = user_name;
+	}
+	
+	
+}

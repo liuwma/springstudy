@@ -1,0 +1,9 @@
+package pers.lwm.springstudy;
+
+public class User {
+
+	private int id ;
+	private String user_name;
+	
+	
+}

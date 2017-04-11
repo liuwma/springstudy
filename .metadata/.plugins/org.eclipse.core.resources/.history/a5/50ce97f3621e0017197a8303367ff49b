@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 属性注入 -->
+	<bean id="user" class="pers.lwm.springstudy.User">
+		<property name="name" value="lwm" />
+		<property name="age" value="12" />
+	</bean>
+	<!-- 构造函数注入 -->
+	<bean id="user2" class="pers.lwm.springstudy.User">
+		<constructor-arg name="id" value="1" />
+		<constructor-arg name="name" value="lwm" />
+		<constructor-arg name="age" value="20" />
+	</bean>
+	<!-- 指定scope 设置非单例模式 -->
+	<bean id="user3" class="pers.lwm.springstudy.User" scope="prototype">
+		<constructor-arg name="id" value="1" />
+		<constructor-arg name="name" value="lwm" />
+		<constructor-arg name="age" value="20" />
+	</bean>
+	<!-- 通过指定工厂方法创建一个bean实例 -->
+	<bean id="calendar" class="java.util.Calendar" factory-method="getInstance" />
+	
+</beans>
