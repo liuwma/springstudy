@@ -1,6 +1,0 @@
-package pers.lwm.springstudy;
-
-public class ToDo {
-
-	private int user_id;
-}

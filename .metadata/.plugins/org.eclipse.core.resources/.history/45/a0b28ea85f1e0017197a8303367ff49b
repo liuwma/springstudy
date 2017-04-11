@@ -1,8 +1,0 @@
-package pers.lwm.springstudy;
-
-public class DynamicProxy {
-	public static void main(String[] args) {
-		Class<?> c = Class.forName("pers.lwm.springstudy.User");
-		
-	}
-}
